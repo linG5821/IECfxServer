@@ -37,6 +37,7 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+
         </dependency>
     </dependencies>
 
@@ -80,6 +81,7 @@
                     <bundleJre>true</bundleJre>
                     <mainClass>jkl.iec.tc.application.Main</mainClass>
                     <generateInstaller>false</generateInstaller>
+                    <assetsDir>${basedir}/src/main/resources/assets</assetsDir>
                 </configuration>
                 <executions>
                     <execution>
