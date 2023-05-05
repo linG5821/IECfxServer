@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="170.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.tc.fx.gui.IECMEstageController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+      <children>
+        <Button id="limits" fx:id="limitsButton" mnemonicParsing="false" onAction="#limitsButtonAction" text="set Limits" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="200.0" spacing="5.0">
+          <children>
+            <Label text="Value" />
+            <TextField fx:id="valueText" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="Empty Tooltip" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+          <children>
+            <Slider id="slider" fx:id="valueSlider" blockIncrement="10.0" focusTraversable="true" majorTickUnit="50.0" minorTickCount="2" opacity="1.0" prefWidth="200.0" showTickLabels="true" showTickMarks="false" visible="true" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="200.0" spacing="5.0">
+          <children>
+            <Label text="MIN" />
+            <TextField fx:id="minText" editable="true" prefHeight="-1.0" prefWidth="80.0" promptText="">
+              <HBox.margin>
+                <Insets right="15.0" />
+              </HBox.margin>
+            </TextField>
+            <Label text="MAX" />
+            <TextField fx:id="maxText" prefWidth="80.0" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>

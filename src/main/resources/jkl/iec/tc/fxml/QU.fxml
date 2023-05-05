@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="170.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.tc.fx.gui.IECQUstageController">
+  <center>
+    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+      <children>
+        <CheckBox fx:id="IVBox" mnemonicParsing="false" text="IV [0x80]" />
+        <CheckBox fx:id="NTBox" mnemonicParsing="false" text="NT [0x40]" />
+        <CheckBox fx:id="SBBox" mnemonicParsing="false" text="SB [0x20]" />
+        <CheckBox fx:id="BLBox" mnemonicParsing="false" text="BL [0x10]" />
+        <CheckBox fx:id="OVBox" mnemonicParsing="false" text="OV [0x01]">
+          <VBox.margin>
+            <Insets top="6.0" />
+          </VBox.margin>
+        </CheckBox>
+      </children>
+      <padding>
+        <Insets left="125.0" />
+      </padding>
+    </VBox>
+  </center>
+</BorderPane>

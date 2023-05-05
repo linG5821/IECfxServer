@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="-1.0" prefWidth="999.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.tc.application.IECServerStageController">
+  <children>
+    <HBox id="p1" fx:id="controllPanel" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="227.0" spacing="5.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#addButtonAction" text="Add Item" />
+        <Button mnemonicParsing="false" onAction="#clearButtonAction" text="Clear List" />
+        <Separator prefWidth="50.0" visible="false" />
+        <Button fx:id="ServerStartButton" mnemonicParsing="false" onAction="#startButtonAction" text="Start Server" />
+        <Label text="PortNo." />
+        <TextField fx:id="ServerPortText" prefWidth="91.0" text="2404" />
+        <Button fx:id="ServerStopButton" disable="true" mnemonicParsing="false" onAction="#stopButtonAction" text="Stop Server" />
+        <Separator prefWidth="60.0" visible="false" />
+        <Button mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+        <Button mnemonicParsing="false" onAction="#loadButtonAction" text="Load" />
+      </children>
+      <padding>
+        <Insets left="10.0" fx:id="x1" />
+      </padding>
+    </HBox>
+    <SplitPane dividerPositions="0.5" focusTraversable="true" orientation="VERTICAL" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <StackPane id="defp" fx:id="ItemPanel" prefHeight="-1.0" prefWidth="-1.0" />
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="Trace">
+              <content>
+                <TextArea fx:id="LogArea" prefWidth="200.0" wrapText="true" />
+              </content>
+            </Tab>
+            <Tab text="Clients">
+              <content>
+                <TableView fx:id="ClientList" prefHeight="200.0" prefWidth="200.0">
+                  <columns>
+                    <TableColumn prefWidth="75.0" text="ID">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="Idx" />
+                      </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="160.0" text="Remote Address">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="RemoteAddress" />
+                      </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="75.0" text="Status">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="Iecstatus" />
+                      </cellValueFactory>
+                    </TableColumn>
+                  </columns>
+                </TableView>
+              </content>
+            </Tab>
+            <Tab text="Options">
+              <content>
+                <HBox alignment="CENTER" padding="$x1" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                      <children>
+                        <RadioButton mnemonicParsing="false" text="SEVERE">
+                          <toggleGroup>
+                            <ToggleGroup fx:id="logging" />
+                          </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="INFO" toggleGroup="$logging" />
+                        <RadioButton mnemonicParsing="false" text="FINE" toggleGroup="$logging" />
+                      </children>
+                      <padding>
+                        <Insets left="10.0" fx:id="x1" />
+                      </padding>
+                    </VBox>
+                    <Button mnemonicParsing="false" onAction="#SockParamButton" text="SocketParameter" />
+                  </children>
+                </HBox>
+              </content>
+            </Tab>
+            <Tab text="About">
+              <content>
+                <TableView fx:id="InfoTable" prefHeight="200.0" prefWidth="200.0">
+                  <columns>
+                    <TableColumn prefWidth="250.0" text="KEY">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="key" />
+                      </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="250.0" text="VALUE">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="value" />
+                      </cellValueFactory>
+                    </TableColumn>
+                  </columns>
+                </TableView>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="170.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.tc.fx.gui.IECSPstageController">
+  <center>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+          <children>
+            <RadioButton fx:id="OffRadio" mnemonicParsing="false" onAction="#onAction" text="Off">
+              <toggleGroup>
+                <ToggleGroup fx:id="status" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="OnRadio" mnemonicParsing="false" onAction="#onAction" selected="true" text="ON" toggleGroup="$status">
+              <HBox.margin>
+                <Insets left="25.0" />
+              </HBox.margin>
+            </RadioButton>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>

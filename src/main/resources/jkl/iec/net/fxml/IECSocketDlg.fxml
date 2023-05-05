@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="273.0" prefWidth="204.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.net.fx.gui.IECSocketStageController">
+  <center>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
+      <children>
+        <Label fx:id="SockLabel" alignment="CENTER" text="Label" />
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="T0" />
+            <TextField fx:id="t0text" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="server expect polling time out" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="T1" />
+            <TextField fx:id="t1text" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="The Socket expect an acknwolage for transmited data after this Time" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="T2" />
+            <TextField fx:id="t2text" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="The socket has to acknowledge on received data after this time" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="T3" />
+            <TextField fx:id="t3text" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="Timeout for polling (testFrames) if no Data transmission" />
+              </tooltip>
+            </TextField>
+          </children>
+          <padding>
+            <Insets bottom="22.0" />
+          </padding>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="w" />
+            <TextField fx:id="wtext" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="The socket has to acknowledge for received data after this amount of messages" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="k" />
+            <TextField fx:id="ktext" prefWidth="80.0">
+              <tooltip>
+                <Tooltip text="The socket expect an acknowledge for transmitted data after this amount of messages" />
+              </tooltip>
+            </TextField>
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets top="10.0" />
+      </padding>
+    </VBox>
+  </center>
+</BorderPane>

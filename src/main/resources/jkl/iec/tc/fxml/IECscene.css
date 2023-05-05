@@ -1,0 +1,63 @@
+.root {
+  /*-fx-focus-color: #5593ff;*/
+  /*-fx-background: #0093f4; */
+}
+
+.iecpane {
+    -fx-background-color: #8fbc8f;
+/*    -fx-background-radius: 20.0em; */
+    -fx-border-width:  15;
+    -fx-border-color: fuchsia;
+    -fx-border-radius: 10;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+} 
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.errorlabel {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.radio-button {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.text-area {
+    -fx-skin: "javafx.scene.control.skin.TextAreaSkin";
+    -fx-background-color: black;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 2;
+    -fx-padding: 1;
+    -fx-text-fill: black;
+}
+
+.check-box {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#BorderPane {
+  -fx-background-image: url("background.jpg");
+   -fx-border-width:  3;
+   -fx-border-color: black;
+}

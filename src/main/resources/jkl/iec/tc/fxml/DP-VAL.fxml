@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="170.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jkl.iec.tc.fx.gui.IECDPstageController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="200.0">
+      <children>
+        <VBox alignment="CENTER" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" spacing="15.0">
+          <children>
+            <CheckBox fx:id="IVCheck" mnemonicParsing="false" onAction="#OnIVCheck" text="Excude IV-States">
+              <VBox.margin>
+                <Insets top="25.0" />
+              </VBox.margin>
+            </CheckBox>
+            <Button fx:id="limitsButton" mnemonicParsing="false" onAction="#limitButtonAction" text="set Limits" />
+          </children>
+          <padding>
+            <Insets bottom="10.0" />
+          </padding>
+        </VBox>
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="200.0">
+      <children>
+        <RadioButton fx:id="DiffRadio" mnemonicParsing="false" onAction="#onAction" text="00">
+          <toggleGroup>
+            <ToggleGroup fx:id="x1" />
+          </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="OffRadio" mnemonicParsing="false" onAction="#onAction" text="Off" toggleGroup="$x1">
+          <HBox.margin>
+            <Insets left="25.0" fx:id="x2" />
+          </HBox.margin>
+        </RadioButton>
+        <RadioButton fx:id="OnRadio" mnemonicParsing="false" onAction="#onAction" selected="true" text="ON" toggleGroup="$x1">
+          <HBox.margin>
+            <Insets left="25.0" fx:id="x2" />
+          </HBox.margin>
+        </RadioButton>
+        <RadioButton fx:id="FaultRadio" mnemonicParsing="false" onAction="#onAction" text="11" toggleGroup="$x1" HBox.margin="$x2" />
+      </children>
+    </HBox>
+  </center>
+</BorderPane>
